@@ -1,6 +1,169 @@
 @import 'fonts';
+@import 'variables';
+@import 'bootstrap-grid.css';
+
+$navigationHeight: 60px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: cornflowerblue;
+}
+
+a {
+  text-decoration: none;
+  color: $colWhite;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inflex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-wrapper {
+  height: 75vh;
+  min-height: 480px;
+  background:
+          //0% 141% / 100% no-repeat url('../images/leaf.svg'),
+          linear-gradient(rgba(0,0,0, .15), rgba(0,0,0, .45)),
+          center / cover no-repeat url('../images/bb.jpg');
+  background-attachment: fixed;
+  //background-size: cover;
+  //background-position: center;
+}
+
+// header.pug
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6% 0;
+  height: $navigationHeight;
+  color: $colWhite;
+}
+
+// responsive-menu.pug
+.hamburger{
+  font-size: 1.2em;
+}
+
+// logo.pug
+.logo__link {
+
+}
+
+.logo__image {
+  width: 48px;
+  margin-right: 5px;
+}
+
+.logo__text {
+  font-size: 1.45em;
+}
+
+// header-caption.pug
+.header-caption__wrapper {
+  color: $colWhite;
+  text-align: center;
+  height: calc(100% - #{$navigationHeight});
+}
+
+.header-caption {
+  margin-top: -#{$navigationHeight};
+}
+
+.header-caption__big {
+  font-size: 3em;
+}
+
+.header-caption__small {
+  font-size: 1.1em;
+}
+
+// buttons
+.btn {
+  background: red;
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+.btn-primary {
+  background: $colBlue;
+}
+
+@for $i from 1 through 10 {
+  .my-#{$i} {
+    margin-top: #{$i}px;
+  }
+}
+
+// section
+
+.section {
+  padding: 50px 10px;
+}
+
+.section-header {
+  font-size: 2.7em;
+  text-align: center;
+  color: $colWhite;
+}
+
+.section--light-bliberry{
+  background: $colBlue;
+  color: #e0e0e0;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-part {
+  padding: 10px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.section-part__icon {
+  font-size: 7em;
+}
+
+.section-part__header {
+  font-size: 2.3em;
+}
+
+.section-part__text {
+  padding: 7px 0;
+  line-height: 1.5em;
 }
