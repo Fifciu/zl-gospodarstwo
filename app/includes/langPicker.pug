@@ -1,0 +1,15 @@
+div#app
+    transition(name="fade")
+        div.modal(v-if="modal")
+            div.fas.fa-times.modal-close(@click="modal = false")
+            div.picker
+                div.langPicker(@click='pick("pl")' v-if="current !== 'pl'")
+                    div.lang-option.pl
+                div.langPicker(@click='pick("en")' v-if="current !== 'en'")
+                    div.lang-option.en
+                div.langPicker(@click='pick("ar")' v-if="current !== 'ar'")
+                    div.lang-option.ar
+    div.langPicker(@click='modal = true')
+        div.lang-option.pl(v-if="current === 'pl'")
+        div.lang-option.en(v-if="current === 'en'")
+        div.lang-option.ar(v-if="current === 'ar'")

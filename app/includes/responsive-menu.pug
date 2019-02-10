@@ -1,2 +1,15 @@
-nav.menu
-    i.fas.fa-bars.hamburger
+nav#responsiveMenu
+    i.fas.fa-bars.hamburger(@click="visible = true")
+    div.mobile-nav(v-bind:class="{visible: visible}")
+        div.fas.fa-times.modal-close.modal-close--menu(@click="visible = false")
+        ul.mobile-ul
+            li.mobile-li
+                a.mobile-link(href="#") Home
+            li.mobile-li
+                a.mobile-link(href="#") O firmie
+            li.mobile-li
+                a.mobile-link(href="#") Oferta
+            li.mobile-li
+                a.mobile-link(href="#") Certyfikaty
+            li.mobile-li
+                a.mobile-link(href="#") Kontakt

@@ -1,6 +1,9 @@
 div.header-wrapper
   div.header
     include logo.pug
-    include responsive-menu
+    div.header-right
+      include desktop-menu
+      include langPicker.pug
+      include responsive-menu
   div.header-caption__wrapper.flex-center
     include header-caption
