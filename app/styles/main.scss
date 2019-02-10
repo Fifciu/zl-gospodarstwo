@@ -47,8 +47,7 @@ a {
 }
 
 .header-wrapper {
-  height: 75vh;
-  min-height: 480px;
+  height: 100vh;
   background:
           //0% 141% / 100% no-repeat url('../images/leaf.svg'),
           linear-gradient(rgba(0,0,0, .15), rgba(0,0,0, .45)),
@@ -127,8 +126,17 @@ a {
 
 // section
 
-.section {
+@mixin sectionPadding(){
   padding: 50px 10px;
+}
+
+@mixin upperShadow() {
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+}
+
+.section {
+  @include sectionPadding();
 }
 
 .section-header {
@@ -140,8 +148,7 @@ a {
 .section--light-bliberry{
   background: $colBlue;
   color: #e0e0e0;
-  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
-  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+  @include upperShadow;
 }
 
 .section-content {
@@ -149,10 +156,29 @@ a {
   flex-wrap: wrap;
 }
 
+.section-subheader{
+  text-align: center;
+}
+
 .section-part {
   padding: 10px 20px;
   margin-top: 40px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    width: 50%;
+
+    &.section-part--wider {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    width: calc(100% / 3);
+    &.section-part--wider {
+      width: calc(100% / 3);
+    }
+  }
 }
 
 .section-part__icon {
@@ -166,4 +192,104 @@ a {
 .section-part__text {
   padding: 7px 0;
   line-height: 1.5em;
+}
+
+// offer.pug
+.offer {
+  @include sectionPadding();
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  background: $colWhite;
+  @include upperShadow;
+}
+
+.fruits {
+  margin-top: 35px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.fruit {
+  width: 100%;
+  margin: 0 auto;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    height: 210px;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin: 0;
+  }
+
+  @media (min-width: 992px) {
+    width: calc(100% / 3);
+    height: 240px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    .fruit__name{
+      height: 100%;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.fruit__image {
+  width: 100%;
+  position: absolute;
+}
+
+.fruit__name {
+  position: absolute;
+  bottom: 0px;
+  left: 0; right: 0; margin: 0 auto;
+  font-size: 1.6em;
+  text-align: center;
+  color: $colWhite;
+  font-weight: bold;
+  height: 80px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6), rgba(0,0,0,.9));
+  transition: .7s;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6px;
+}
+
+.certifications {
+  @include sectionPadding();
+  background: $colDarkestBilberry;
+}
+
+.certs {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.cert {
+  width: 40%;
+  margin: 20px 5%;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.cert__img-wrapper {
+  overflow:hidden;
+}
+
+.cert__img {
+  width: 90%;
+}
+
+.black {
+  color: #000;
 }
