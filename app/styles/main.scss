@@ -668,17 +668,23 @@ hr.fancy-line, hr.fancy-line:before {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap:wrap;
   padding: 50px 0;
 }
 
 .cafle {
   padding: 40px;
-  width: calc(100% / 5);
+  display: block;
+  width: calc(100%);
   //background: rgba(0, 0, 0, .7);
-  margin: 0 20px;
+  margin: 10px 20px;
   text-align: center;
   position: relative;
   z-index:2;
+
+  @media (min-width: 765px) {
+    width: calc(100% / 3);
+  }
 
   &:before {
     content: '';
@@ -721,6 +727,12 @@ hr.fancy-line, hr.fancy-line:before {
 
   &.smaller {
     font-size: .85em;
+  }
+
+  &.special {
+   // background: rgba(0,0,0,.6);
+    display: inline-block;
+    padding: 5px 8px;
   }
 }
 
