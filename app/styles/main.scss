@@ -51,11 +51,19 @@ a {
   justify-content: center;
 }
 
+.no-width{
+  width: 0px;
+  display: none;
+  @media (min-width: $mobileNavBreakpoint) {
+    display: block;
+  }
+}
+
 .header-wrapper {
   height: 100vh;
   background:
           //0% 141% / 100% no-repeat url('../images/leaf.svg'),
-          linear-gradient(rgba(0,0,0, .15), rgba(0,0,0, .6 )),
+          linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .6 )),
           center / cover no-repeat url('../images/bb.jpg');
   background-attachment: fixed;
   //background-size: cover;
@@ -76,7 +84,7 @@ a {
   transition: .7s;
 
   &.special {
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0, 0, 0, .91);
     -webkit-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.47);
     -moz-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.47);
     box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.47);
@@ -519,15 +527,65 @@ a {
 }
 
 .desktop-li {
+  padding: 0 10px;
 
+  @media (min-width: 992px) {
+    padding: 0 15px;
+  }
 }
 
 .desktop-link {
-  padding: 0 10px;
+  padding: 10px;
 }
 
 
 //vendor
+
+/* Ripple Out */
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: $colBlue solid 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
 
 hr.fancy-line {
   border: 0;
@@ -560,13 +618,109 @@ hr.fancy-line, hr.fancy-line:before {
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
 }
 
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+// contact
+
 .contact{
-  background: $colBlue;
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('../images/contact.jpg');
+  background-size: cover;
+  background-position: center;
   color: #fff;
   @include sectionPadding;
 
   .section-header {
     color: #fff;
+  }
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.cafle {
+  padding: 40px;
+  width: calc(100% / 5);
+  //background: rgba(0, 0, 0, .7);
+  margin: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index:2;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width:160px;
+    height:160px;
+    background: $colBlue;
+    transform: rotate(45deg);
+    z-index: -1;
+    top:0;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    border-top-right-radius: 40%;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width:150px;
+    height:150px;
+    background: $colDarkBilberry;
+    transform: rotate(22.5deg);
+    z-index: -1;
+    top:0;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    opacity: .7;
+  }
+}
+
+.cafle__title {
+  font-size: 1.6em;
+}
+
+.cafle__value {
+  letter-spacing: 1px;
+
+  &.smaller {
+    font-size: .85em;
   }
 }
 
