@@ -11,13 +11,19 @@ new Vue({
     } else if(pathname.indexOf('ar') !== -1) {
       this.current = 'ar';
     } else {
-      this.current = 'en';
+      this.current = 'pl';
     }
   },
   methods: {
     pick: function(val) {
       this.current = val;
       this.modal = false;
+
+      if(val !== 'pl'){
+        setTimeout(function(){
+          window.location.href = '/' + val;
+        }, 1000);
+      }
     }
   }
 });
