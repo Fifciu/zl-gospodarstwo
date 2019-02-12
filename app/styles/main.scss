@@ -34,6 +34,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.body-wrapper {
+  width:100%;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: $colWhite;
@@ -64,7 +69,7 @@ a {
   background:
           //0% 141% / 100% no-repeat url('../images/leaf.svg'),
           linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .6 )),
-          center / cover no-repeat url('../images/bb.jpg');
+          center / cover no-repeat url('../images/smaller/background.jpg');
   background-attachment: fixed;
   //background-size: cover;
   //background-position: center;
@@ -154,6 +159,10 @@ a {
   font-size: 1.2em;
   cursor: pointer;
   transition: .6s;
+  @media (min-width: 1000px) {
+    font-size: 1.45em;
+    padding: 9px 20px;
+  }
  // text-transform: uppercase;
 }
 
@@ -278,13 +287,14 @@ a {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
-  background: rgb(248, 247, 249);
+  background: rgb(236, 235, 237);
 
   .section-header {
     color: $colDarkestBilberry;
   }
   .section-subheader {
     color: #111;
+    padding: 0 30px;
   }
 }
 
@@ -315,6 +325,11 @@ a {
   @media (min-width: 992px) {
     width: calc(100% / 3);
     height: 220px;
+  }
+
+  @media (min-width: 1400px) {
+    width: calc(100% / 3);
+    height: 300px;
   }
 
   &:hover {
@@ -355,6 +370,8 @@ a {
 
 .certifications {
   @include sectionPadding();
+  max-width: 1000px;
+  margin: 0 auto;
   background: #fff;
 
   .section-header {
@@ -653,7 +670,7 @@ hr.fancy-line, hr.fancy-line:before {
 // contact
 
 .contact{
-  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('../images/contact.jpg');
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('../images/smaller/contact.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -700,12 +717,21 @@ hr.fancy-line, hr.fancy-line:before {
     margin-left:auto;
     margin-right:auto;
     border-top-right-radius: 40%;
+
+    @media (min-width: 1200px) {
+      width:220px;
+      height:220px;
+    }
   }
   &:after {
     content: '';
     position: absolute;
     width:150px;
     height:150px;
+    @media (min-width: 1200px) {
+      width:200px;
+      height:200px;
+    }
     background: $colDarkBilberry;
     transform: rotate(22.5deg);
     z-index: -1;
