@@ -84,3 +84,28 @@
     }
   }
 })();
+
+// Show logo in top left corner
+(function(){
+  var el = document.querySelector('.logo__link');
+  var targetEl = document.querySelector('#about');
+  if(!el || !targetEl){
+    return;
+  }
+
+
+  window.addEventListener('scroll', function(){
+    var target = targetEl.offsetTop;
+
+    if(window.scrollY >= target) {
+      if(!el.classList.contains('visible')){
+        el.classList.add('visible');
+      }
+    } else {
+      if(el.classList.contains('visible')){
+        el.classList.remove('visible');
+      }
+    }
+  });
+
+})();
