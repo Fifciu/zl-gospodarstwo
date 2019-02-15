@@ -1,6 +1,8 @@
 @import 'fonts';
 @import 'variables';
 @import 'bootstrap-grid.css';
+@import 'vendor/aos.css';
+@import 'fa.min.css';
 
 $navigationHeight: 60px;
 $mobileNavBreakpoint: 765px;
@@ -730,6 +732,7 @@ hr.fancy-line, hr.fancy-line:before {
   background-position: center;
   color: #fff;
   @include sectionPadding;
+  padding-bottom: 70px;
 
   .section-header {
     color: #fff;
