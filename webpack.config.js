@@ -103,7 +103,8 @@ const productionConfig = merge([
     },
     output: {
       chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
-      filename: `${paths.js}/[name].[chunkhash:8].js`
+      filename: `${paths.js}/[name].[chunkhash:8].js`,
+      publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
     },
     performance: {
       hints: 'warning', // 'error' or false are valid too
