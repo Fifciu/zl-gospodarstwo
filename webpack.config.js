@@ -11,8 +11,9 @@ const { StatsWriterPlugin } = require('webpack-stats-plugin')
 const ImageminWebpWebpackPlugin = require('./webp')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
+
+const  workboxPlugin = require('workbox-webpack-plugin');
 
 const parts = require('./webpack.parts');
 
@@ -103,8 +104,8 @@ const productionConfig = merge([
       //chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
       chunkFilename: `${paths.js}/[name].js`,
       //filename: `${paths.js}/[name].[chunkhash:8].js`//,
-      filename: `${paths.js}/[name].js`,
-      publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
+      filename: `${paths.js}/[name].js`//,
+      //publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
     },
     performance: {
       hints: 'warning', // 'error' or false are valid too
@@ -128,7 +129,12 @@ const productionConfig = merge([
         filename: "[name].css",
         chunkFilename: "[id].css"
       }),
-      new HTMLInlineCSSWebpackPlugin()
+      new HTMLInlineCSSWebpackPlugin(),
+      new workboxPlugin.GenerateSW({
+        swDest: 'sw.js',
+        clientsClaim: true,
+        skipWaiting: true,
+      })
     ]
   },
   parts.minifyJS({
