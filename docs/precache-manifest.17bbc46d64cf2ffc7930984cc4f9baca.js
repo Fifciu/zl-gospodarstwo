@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/plum.webp"
   },
   {
-    "revision": "f6f1795078e490a5cc9749dd8ce47df4",
+    "revision": "3dc4e9178e12ba64d5a96d58e43f588a",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/index.html"
   },
   {
@@ -160,7 +160,7 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/0.css"
   },
   {
-    "revision": "a68ee2ecb27c51b06905b1e7f51903ad",
+    "revision": "1994fe97b8934d761cb8d5b7d253a3dc",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/../stats.json"
   }
 ];
