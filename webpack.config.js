@@ -8,12 +8,12 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const { StatsWriterPlugin } = require('webpack-stats-plugin')
-const ImageminWebpWebpackPlugin = require('./webp')
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
 
-const  workboxPlugin = require('workbox-webpack-plugin');
+const workboxPlugin = require('workbox-webpack-plugin');
 
 const parts = require('./webpack.parts');
 

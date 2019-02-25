@@ -97,12 +97,20 @@ a {
 //  }
 //}
 
-.header-wrapper {
-  height: 100vh;
+.webp .header-wrapper {
   background:
-          //0% 141% / 100% no-repeat url('../images/leaf.svg'),
+          linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .6 )),
+          center / cover no-repeat url('../images/bg.webp');
+}
+
+.no-webp .header-wrapper {
+  background:
           linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .6 )),
           center / cover no-repeat url('../images/bg.jpg');
+}
+
+.header-wrapper {
+  height: 100vh;
 
   @media (min-width: 1025px) {
     background-attachment: fixed;
@@ -757,11 +765,11 @@ hr.fancy-line, hr.fancy-line:before {
 
 // contact
 
-//.webp .contact {
-//  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('../images/contact-bg.webp');
-//}
+.webp .contact {
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('../images/contact-bg.webp');
+}
 
-.contact {
+.no-webp .contact {
   background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('../images/contact-bg.jpg');
 }
 
