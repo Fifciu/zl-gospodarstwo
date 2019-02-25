@@ -71,7 +71,7 @@ a {
   background:
           //0% 141% / 100% no-repeat url('../images/leaf.svg'),
           linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .6 )),
-          center / cover no-repeat url('../images/smaller/background.jpg');
+          center / cover no-repeat url('../images/bg.jpg');
 
   @media (min-width: 1025px) {
     background-attachment: fixed;
