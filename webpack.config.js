@@ -8,8 +8,9 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const { StatsWriterPlugin } = require('webpack-stats-plugin')
+const ImageminWebpWebpackPlugin = require('./webp')
 
-const parts = require('./webpack.parts')
+const parts = require('./webpack.parts');
 
 const lintJSOptions = {
   emitWarning: true,
@@ -44,7 +45,7 @@ const lintJSOptions = {
            css - 'styles',
             js - 'scripts'
 */
-const paths = getPaths()
+const paths = getPaths({ buildDir: 'docs' })
 
 const lintStylesOptions = {
   context: path.resolve(__dirname, `${paths.app}/styles`),
@@ -102,9 +103,11 @@ const productionConfig = merge([
       runtimeChunk: 'single'
     },
     output: {
-      chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
-      filename: `${paths.js}/[name].[chunkhash:8].js`,
-      publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
+      //chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
+      chunkFilename: `${paths.js}/[name].js`,
+      //filename: `${paths.js}/[name].[chunkhash:8].js`//,
+      filename: `${paths.js}/[name].js`//,
+      //publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
     },
     performance: {
       hints: 'warning', // 'error' or false are valid too
@@ -115,7 +118,15 @@ const productionConfig = merge([
       new StatsWriterPlugin({ fields: null, filename: '../stats.json' }),
       new webpack.HashedModuleIdsPlugin(),
       new ManifestPlugin(),
-      new CleanPlugin(paths.build)
+      new CleanPlugin(paths.build),
+      new ImageminWebpWebpackPlugin({
+        config: [{
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 90
+          }
+        }]
+      })
     ]
   },
   parts.minifyJS({
@@ -183,7 +194,8 @@ const productionConfig = merge([
     include: paths.app,
     options: {
       limit: 15000,
-      name: `${paths.images}/[name].[hash:8].[ext]`
+      name: `${paths.images}/[name].[ext]`
+      //name: `${paths.images}/[name].[hash:8].[ext]`
     }
   }),
   // should go after loading images

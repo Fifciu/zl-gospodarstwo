@@ -66,7 +66,38 @@ a {
   }
 }
 
-.header-wrapper {
+.webp .header-wrapper {
+  height: 100vh;
+  background:
+          //0% 141% / 100% no-repeat url('../images/leaf.svg'),
+          linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .6 )),
+          center / cover no-repeat url('../images/bg.webp');
+
+  @media (min-width: 1025px) {
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  &:after {
+    content: '';
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
+    left:0;
+    right:0;
+    z-index:-1; /* needed to keep in the background */
+    background: url('../images/bg.webp') center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.no-webp .header-wrapper {
   height: 100vh;
   background:
           //0% 141% / 100% no-repeat url('../images/leaf.svg'),
@@ -89,7 +120,7 @@ a {
     left:0;
     right:0;
     z-index:-1; /* needed to keep in the background */
-    background: url('../images/smaller/background.jpg') center center;
+    background: url('../images/bg.jpg') center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

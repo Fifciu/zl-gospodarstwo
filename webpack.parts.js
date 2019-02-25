@@ -157,6 +157,17 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
           loader: 'url-loader',
           options
         }
+      },
+      {
+        test: /\.(webp)$/,
+
+        include,
+        exclude,
+
+        use: {
+          loader: 'file-loader?name=[name].[ext].webp!webp-loader?{quality: 95}',
+          options
+        }
       }
     ]
   }
