@@ -1,5 +1,5 @@
 {
-  "main.css": "/styles/0.5228f81c.css",
+  "main.css": "/styles/0.7ba691a3.css",
   "main.js": "/scripts/main.js",
   "runtime.js": "/scripts/runtime.js",
   "../stats.json": "/../stats.json",
@@ -27,8 +27,8 @@
   "images/bliberry.webp": "/images/bliberry.webp",
   "images/cherry.jpg": "/images/cherry.jpg",
   "images/cherry.webp": "/images/cherry.webp",
-  "images/contact.jpg": "/images/contact.jpg",
-  "images/contact.webp": "/images/contact.webp",
+  "images/contact-bg.jpg": "/images/contact-bg.jpg",
+  "images/contact-bg.webp": "/images/contact-bg.webp",
   "images/fa-brands-400.svg": "/images/fa-brands-400.svg",
   "images/fa-regular-400.svg": "/images/fa-regular-400.svg",
   "images/fa-solid-900.svg": "/images/fa-solid-900.svg",
