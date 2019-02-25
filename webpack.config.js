@@ -10,6 +10,10 @@ const CleanPlugin = require('clean-webpack-plugin')
 const { StatsWriterPlugin } = require('webpack-stats-plugin')
 const ImageminWebpWebpackPlugin = require('./webp')
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
+
 const parts = require('./webpack.parts');
 
 const lintJSOptions = {
@@ -46,13 +50,6 @@ const lintJSOptions = {
             js - 'scripts'
 */
 const paths = getPaths({ buildDir: 'docs' })
-
-const lintStylesOptions = {
-  context: path.resolve(__dirname, `${paths.app}/styles`),
-  syntax: 'scss',
-  emitErrors: false
-  // fix: true,
-}
 
 const cssPreprocessorLoader = { loader: 'fast-sass-loader' }
 
@@ -106,8 +103,8 @@ const productionConfig = merge([
       //chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
       chunkFilename: `${paths.js}/[name].js`,
       //filename: `${paths.js}/[name].[chunkhash:8].js`//,
-      filename: `${paths.js}/[name].js`,
-      publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
+      filename: `${paths.js}/[name].js`//,
+     // publicPath: 'https://filipjedrasik.github.io/zl-gospodarstwo/'
     },
     performance: {
       hints: 'warning', // 'error' or false are valid too
@@ -123,10 +120,15 @@ const productionConfig = merge([
         config: [{
           test: /\.(jpe?g|png)/,
           options: {
-            quality: 90
+            quality: 100
           }
         }]
-      })
+      }),
+      new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css"
+      }),
+      new HTMLInlineCSSWebpackPlugin()
     ]
   },
   parts.minifyJS({
