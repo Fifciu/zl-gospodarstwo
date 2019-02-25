@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.bdc37b505e8e5f0cfd91aebd644c441f.js"
+  "https://filipjedrasik.github.io/zl-gospodarstwo/precache-manifest.f0c9a8126e272ecd062209ead015784f.js"
 );
 
 workbox.skipWaiting();
