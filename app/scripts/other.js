@@ -4,3 +4,11 @@ if ('serviceWorker' in navigator) {
     }).catch(registrationError => {})
   })
 }
+
+// @click fruit
+[...document.querySelectorAll('.fruit')].forEach(fruit =>
+    fruit.addEventListener('click', ev => {
+      fruit.classList.toggle('show-description');
+    }
+  )
+);

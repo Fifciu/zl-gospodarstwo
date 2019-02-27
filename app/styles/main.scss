@@ -267,6 +267,15 @@ a {
   }
 }
 
+.btn-small {
+  font-size: 1em;
+  padding: 6px 10px;
+}
+
+.btn-square{
+  padding: 10px 12px;
+}
+
 .btn-secondary {
   background: transparent;
   border: 2px solid $colWhite;
@@ -385,6 +394,8 @@ a {
   }
 }
 
+
+
 .fruits {
   margin-top: 35px;
   @media (min-width: 768px) {
@@ -396,12 +407,12 @@ a {
 .fruit {
   width: 100%;
   margin: 0 auto;
-  height: 160px;
   overflow: hidden;
   position: relative;
+  min-height: 160px;
 
   @media (min-width: 500px) and (max-width: 767px) {
-    height: 210px;
+    min-height: 210px;
   }
 
   @media (min-width: 768px) {
@@ -411,12 +422,12 @@ a {
 
   @media (min-width: 992px) {
     width: calc(100% / 3);
-    height: 220px;
+    min-height: 220px;
   }
 
   @media (min-width: 1400px) {
     width: calc(100% / 3);
-    height: 300px;
+    min-height: 300px;
   }
 
   &:hover {
@@ -427,6 +438,97 @@ a {
       transform:translateY(0%);
     }
   }
+
+  .fruit__description {
+    left: 0;
+    bottom:0;
+    transform:translateY(100%);
+    transition: .7s;
+  }
+
+  .fruit__name {
+    transition: .6s;
+  }
+
+  &.show-description {
+    //min-height: 500px;
+    .fruit__description {
+      transform:translateY(0%);
+      -webkit-box-shadow: 0px -7px 35px -7px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px -7px 35px -7px rgba(0,0,0,0.75);
+      box-shadow: 0px -7px 35px -7px rgba(0,0,0,0.75);
+      font-size: .9em;
+    }
+
+    .fruit__name{
+      opacity: 0;
+    }
+  }
+}
+
+.fruit-desc__header {
+  //
+}
+
+.fruit-desc__content{
+  color: #222;
+  padding-right: 17%;
+  line-height: 1.4em;
+
+  &.smaller {
+    font-size: .8em;
+  }
+}
+
+.fruit-header__wrapper{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  position:relative;
+}
+
+.cta-wrapper{
+  position: absolute;
+  height: 49px;
+  right: 7.5%;
+  top: 0;bottom:0;
+  margin-top:auto;margin-bottom:auto;
+}
+
+.fruit__cover {
+  width: 100%;
+  height: 160px;
+  overflow:hidden;
+  position: relative;
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    height: 210px;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 992px) {
+    height: 220px;
+  }
+
+  @media (min-width: 1400px) {
+    height: 300px;
+  }
+}
+
+.fruit__description {
+  position: absolute;
+  z-index:1001;
+  background: #fff;
+
+  padding: 20px 40px 20px 20px;
+}
+
+.fruit.show-description {
+  display: block;
 }
 
 .fruit__image {
@@ -898,3 +1000,34 @@ hr.fancy-line, hr.fancy-line:before {
 .footer__link, .footer__text {
   font-size: .8em;
 }
+
+// flags
+.flag {
+  width: 60px;
+  height: 30px;
+  position:relative;
+
+  &.poland {
+    background: url('../images/flags/poland.png');
+  }
+
+  &.uk {
+    background: url('../images/flags/uk.png');
+  }
+
+  background-size: cover;
+}
+
+.country-number {
+  display: flex;
+  align-items: center;
+  width:50%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 8%;
+
+  .number{
+    padding-left: 10px;
+  }
+}
+

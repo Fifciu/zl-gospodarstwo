@@ -1,5 +1,5 @@
 {
-  "main.css": "https://filipjedrasik.github.io/zl-gospodarstwo/styles/0.123bcfb3.css",
+  "main.css": "https://filipjedrasik.github.io/zl-gospodarstwo/styles/0.2e4c0057.css",
   "main.js": "https://filipjedrasik.github.io/zl-gospodarstwo/scripts/main.js",
   "runtime.js": "https://filipjedrasik.github.io/zl-gospodarstwo/scripts/runtime.js",
   "../stats.json": "https://filipjedrasik.github.io/zl-gospodarstwo/../stats.json",
@@ -39,6 +39,6 @@
   "images/strawberry.jpg": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.jpg",
   "images/strawberry.webp": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.webp",
   "index.html": "https://filipjedrasik.github.io/zl-gospodarstwo/index.html",
-  "precache-manifest.6e0363e4858f66f7a5a0ec4237e474ad.js": "https://filipjedrasik.github.io/zl-gospodarstwo/precache-manifest.6e0363e4858f66f7a5a0ec4237e474ad.js",
+  "precache-manifest.ae44a0772058f6c22c154136f4432ead.js": "https://filipjedrasik.github.io/zl-gospodarstwo/precache-manifest.ae44a0772058f6c22c154136f4432ead.js",
   "sw.js": "https://filipjedrasik.github.io/zl-gospodarstwo/sw.js"
 }
