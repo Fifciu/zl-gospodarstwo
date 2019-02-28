@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.jpg"
   },
   {
-    "revision": "8edde2df2f272822a176edc46d160f46",
-    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/raspberry.webp"
-  },
-  {
     "revision": "4df93cf5026e8d31e6c20d591e267ce4",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.webp"
+  },
+  {
+    "revision": "8edde2df2f272822a176edc46d160f46",
+    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/raspberry.webp"
   },
   {
     "revision": "b995bdd265358a82117847b6d3673164",
@@ -84,12 +84,12 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/apple.webp"
   },
   {
-    "revision": "8c4c34c69bb3a0003fd1e520aeb7795c",
-    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/bliberry.jpg"
-  },
-  {
     "revision": "cc3be193fb07dde57769f2929f8e8170",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/bliberry.webp"
+  },
+  {
+    "revision": "8c4c34c69bb3a0003fd1e520aeb7795c",
+    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/bliberry.jpg"
   },
   {
     "revision": "61969d433bf265b9717a6c357a1e04e4",
@@ -160,7 +160,7 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/0.css"
   },
   {
-    "revision": "f947883b2e2940ce5163db8873b30b81",
+    "revision": "753e4ce45598de2c34f40a67dfd43513",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/../stats.json"
   }
 ];
