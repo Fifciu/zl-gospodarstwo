@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/cherry.webp"
   },
   {
-    "revision": "3378f5a6a72d1aedba9c",
+    "revision": "8b6c31c7fae41a1015a3",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/scripts/main.js"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.jpg"
   },
   {
-    "revision": "4df93cf5026e8d31e6c20d591e267ce4",
-    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.webp"
-  },
-  {
     "revision": "8edde2df2f272822a176edc46d160f46",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/raspberry.webp"
+  },
+  {
+    "revision": "4df93cf5026e8d31e6c20d591e267ce4",
+    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/strawberry.webp"
   },
   {
     "revision": "b995bdd265358a82117847b6d3673164",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/contact-bg.webp"
   },
   {
-    "revision": "9300329ed75d7f71461363abec9abf48",
+    "revision": "15abb743d7c34de524a726608597c06f",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/index.html"
   },
   {
@@ -60,8 +60,8 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/fa-solid-900.svg"
   },
   {
-    "revision": "3378f5a6a72d1aedba9c",
-    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/styles/0.d636d338.css"
+    "revision": "8b6c31c7fae41a1015a3",
+    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/styles/0.23267659.css"
   },
   {
     "revision": "bc61819beb8832da6c764431cc436e1e",
@@ -84,12 +84,12 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/apple.webp"
   },
   {
-    "revision": "cc3be193fb07dde57769f2929f8e8170",
-    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/bliberry.webp"
-  },
-  {
     "revision": "8c4c34c69bb3a0003fd1e520aeb7795c",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/bliberry.jpg"
+  },
+  {
+    "revision": "cc3be193fb07dde57769f2929f8e8170",
+    "url": "https://filipjedrasik.github.io/zl-gospodarstwo/images/bliberry.webp"
   },
   {
     "revision": "61969d433bf265b9717a6c357a1e04e4",
@@ -156,11 +156,11 @@ self.__precacheManifest = [
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/fonts/OpenSans-400-Latin.d41d8cd9.woff2"
   },
   {
-    "revision": "3378f5a6a72d1aedba9c",
+    "revision": "8b6c31c7fae41a1015a3",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/0.css"
   },
   {
-    "revision": "e98b5e4d96fd91293ea4db91765ad7ad",
+    "revision": "f947883b2e2940ce5163db8873b30b81",
     "url": "https://filipjedrasik.github.io/zl-gospodarstwo/../stats.json"
   }
 ];
